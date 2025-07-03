@@ -1,0 +1,208 @@
+egor@Debian:~$ ls
+ eclipse             gcc   huawei-ubuntu-sound-fix   main.cpp   Документы   Изображения   Общедоступные   Шаблоны
+ eclipse-workspace   git   main                      Видео      Загрузки    Музыка       'Рабочий стол'
+egor@Debian:~$ cd git/edk2/
+egor@Debian:~/git/edk2$ ls
+ArmPkg          Conf              edksetup.bat  FmpDevicePkg         Maintainers.txt  PcAtChipsetPkg        SecurityPkg          UefiCpuPkg
+ArmPlatformPkg  contrib           edksetup.sh   IntelFsp2Pkg         MdeModulePkg     pip-requirements.txt  ShellPkg             UefiPayloadPkg
+ArmVirtPkg      CONTRIBUTING.md   EmbeddedPkg   IntelFsp2WrapperPkg  MdePkg           PrmPkg                SignedCapsulePkg     UnitTestFrameworkPkg
+BaseTools       CryptoPkg         EmulatorPkg   License-History.txt  NetworkPkg       ReadMe.rst            SourceLevelDebugPkg
+Build           DynamicTablesPkg  FatPkg        License.txt          OvmfPkg          RedfishPkg            StandaloneMmPkg
+egor@Debian:~/git/edk2$ mkdir MyPkg
+egor@Debian:~/git/edk2$ ls
+ArmPkg          Conf              edksetup.bat  FmpDevicePkg         Maintainers.txt  OvmfPkg               RedfishPkg           StandaloneMmPkg
+ArmPlatformPkg  contrib           edksetup.sh   IntelFsp2Pkg         MdeModulePkg     PcAtChipsetPkg        SecurityPkg          UefiCpuPkg
+ArmVirtPkg      CONTRIBUTING.md   EmbeddedPkg   IntelFsp2WrapperPkg  MdePkg           pip-requirements.txt  ShellPkg             UefiPayloadPkg
+BaseTools       CryptoPkg         EmulatorPkg   License-History.txt  MyPkg            PrmPkg                SignedCapsulePkg     UnitTestFrameworkPkg
+Build           DynamicTablesPkg  FatPkg        License.txt          NetworkPkg       ReadMe.rst            SourceLevelDebugPkg
+egor@Debian:~/git/edk2$ cd M
+MdeModulePkg/ MdePkg/       MyPkg/        
+egor@Debian:~/git/edk2$ cd MyPkg/
+egor@Debian:~/git/edk2/MyPkg$ ls
+egor@Debian:~/git/edk2/MyPkg$ mkdir HelloDepo
+egor@Debian:~/git/edk2/MyPkg$ cd HelloDepo/
+egor@Debian:~/git/edk2/MyPkg/HelloDepo$ vim
+egor@Debian:~/git/edk2/MyPkg/HelloDepo$ vim
+egor@Debian:~/git/edk2/MyPkg/HelloDepo$ ls
+HelloDepo.c  HelloDepo.inf
+egor@Debian:~/git/edk2/MyPkg/HelloDepo$ cd .
+egor@Debian:~/git/edk2/MyPkg/HelloDepo$ cd
+egor@Debian:~$ ls
+ eclipse             gcc   huawei-ubuntu-sound-fix   main.cpp   Документы   Изображения   Общедоступные   Шаблоны
+ eclipse-workspace   git   main                      Видео      Загрузки    Музыка       'Рабочий стол'
+egor@Debian:~$ cd git/edk2/
+egor@Debian:~/git/edk2$ ls
+ArmPkg          Conf              edksetup.bat  FmpDevicePkg         Maintainers.txt  OvmfPkg               RedfishPkg           StandaloneMmPkg
+ArmPlatformPkg  contrib           edksetup.sh   IntelFsp2Pkg         MdeModulePkg     PcAtChipsetPkg        SecurityPkg          UefiCpuPkg
+ArmVirtPkg      CONTRIBUTING.md   EmbeddedPkg   IntelFsp2WrapperPkg  MdePkg           pip-requirements.txt  ShellPkg             UefiPayloadPkg
+BaseTools       CryptoPkg         EmulatorPkg   License-History.txt  MyPkg            PrmPkg                SignedCapsulePkg     UnitTestFrameworkPkg
+Build           DynamicTablesPkg  FatPkg        License.txt          NetworkPkg       ReadMe.rst            SourceLevelDebugPkg
+egor@Debian:~/git/edk2$ cd MyPkg/
+egor@Debian:~/git/edk2/MyPkg$ ls
+HelloDepo
+egor@Debian:~/git/edk2/MyPkg$ vim
+egor@Debian:~/git/edk2/MyPkg$ ls
+HelloDepo  MyPkg.dsc
+egor@Debian:~/git/edk2/MyPkg$ echo "MyPkg/MyPkg.dsc" >> EmulatorPkg/EmulatorPkg.dsc
+bash: EmulatorPkg/EmulatorPkg.dsc: Нет такого файла или каталога
+egor@Debian:~/git/edk2/MyPkg$ cd -
+/home/egor/git/edk2
+egor@Debian:~/git/edk2$ echo "MyPkg/MyPkg.dsc" >> EmulatorPkg/EmulatorPkg.dsc
+egor@Debian:~/git/edk2$ build -p MyPkg/MyPkg.dsc -m MyPkg/HelloDepo/HelloDepo.inf
+bash: build: команда не найдена
+egor@Debian:~/git/edk2$ cd ~/git/edk2
+egor@Debian:~/git/edk2$ source edksetup.sh
+Loading previous configuration from /home/egor/git/edk2/Conf/BuildEnv.sh
+WORKSPACE: /home/egor/git/edk2
+EDK_TOOLS_PATH: /home/egor/git/edk2/BaseTools
+CONF_PATH: /home/egor/git/edk2/Conf
+egor@Debian:~/git/edk2$ build -p EmulatorPkg/EmulatorPkg.dsc -m MyPkg/HelloDepo/HelloDepo.inf
+Build environment: Linux-6.1.0-37-amd64-x86_64-with-glibc2.36
+Build start time: 00:14:02, Jul.03 2025
+
+WORKSPACE        = /home/egor/git/edk2
+EDK_TOOLS_PATH   = /home/egor/git/edk2/BaseTools
+CONF_PATH        = /home/egor/git/edk2/Conf
+PYTHON_COMMAND   = python3
+
+
+build.py...
+/home/egor/git/edk2/EmulatorPkg/EmulatorPkg.dsc(546): error 3000: 'MyPkg/MyPkg.dsc' must be in format of <TARGET>_<TOOLCHAIN>_<ARCH>_<TOOL>_FLAGS
+        MyPkg/MyPkg.dsc
+
+- Failed -
+Build end time: 00:14:02, Jul.03 2025
+Build total time: 00:00:00
+
+egor@Debian:~/git/edk2$ build -p MyPkg/MyPkg.dsc -m MyPkg/HelloDepo/HelloDepo.inf
+Build environment: Linux-6.1.0-37-amd64-x86_64-with-glibc2.36
+Build start time: 00:14:52, Jul.03 2025
+
+WORKSPACE        = /home/egor/git/edk2
+EDK_TOOLS_PATH   = /home/egor/git/edk2/BaseTools
+CONF_PATH        = /home/egor/git/edk2/Conf
+PYTHON_COMMAND   = python3
+
+
+
+build.py...
+/home/egor/git/edk2/MyPkg/MyPkg.dsc(...): error 5000: No BUILD_TARGETS
+
+
+- Failed -
+Build end time: 00:14:52, Jul.03 2025
+Build total time: 00:00:00
+
+egor@Debian:~/git/edk2$ ls
+ArmPkg          Conf              edksetup.bat  FmpDevicePkg         Maintainers.txt  OvmfPkg               RedfishPkg           StandaloneMmPkg
+ArmPlatformPkg  contrib           edksetup.sh   IntelFsp2Pkg         MdeModulePkg     PcAtChipsetPkg        SecurityPkg          UefiCpuPkg
+ArmVirtPkg      CONTRIBUTING.md   EmbeddedPkg   IntelFsp2WrapperPkg  MdePkg           pip-requirements.txt  ShellPkg             UefiPayloadPkg
+BaseTools       CryptoPkg         EmulatorPkg   License-History.txt  MyPkg            PrmPkg                SignedCapsulePkg     UnitTestFrameworkPkg
+Build           DynamicTablesPkg  FatPkg        License.txt          NetworkPkg       ReadMe.rst            SourceLevelDebugPkg
+egor@Debian:~/git/edk2$ vim MyPkg/MyPkg.dsc 
+egor@Debian:~/git/edk2$ vim EmulatorPkg/EmulatorPkg.dsc 
+egor@Debian:~/git/edk2$ build -p EmulatorPkg/EmulatorPkg.dsc
+Build environment: Linux-6.1.0-37-amd64-x86_64-with-glibc2.36
+Build start time: 00:21:03, Jul.03 2025
+
+WORKSPACE        = /home/egor/git/edk2
+EDK_TOOLS_PATH   = /home/egor/git/edk2/BaseTools
+CONF_PATH        = /home/egor/git/edk2/Conf
+PYTHON_COMMAND   = python3
+
+
+build.py...
+/home/egor/git/edk2/EmulatorPkg/EmulatorPkg.dsc(547): error 3000: 'MyPkg/MyPkg.dsc' must be in format of <TARGET>_<TOOLCHAIN>_<ARCH>_<TOOL>_FLAGS
+        MyPkg/MyPkg.dsc
+
+- Failed -
+Build end time: 00:21:03, Jul.03 2025
+Build total time: 00:00:00
+
+egor@Debian:~/git/edk2$ vim EmulatorPkg/EmulatorPkg.dsc 
+egor@Debian:~/git/edk2$ ls
+ArmPkg          Conf              edksetup.bat  FmpDevicePkg         Maintainers.txt  OvmfPkg               RedfishPkg           StandaloneMmPkg
+ArmPlatformPkg  contrib           edksetup.sh   IntelFsp2Pkg         MdeModulePkg     PcAtChipsetPkg        SecurityPkg          UefiCpuPkg
+ArmVirtPkg      CONTRIBUTING.md   EmbeddedPkg   IntelFsp2WrapperPkg  MdePkg           pip-requirements.txt  ShellPkg             UefiPayloadPkg
+BaseTools       CryptoPkg         EmulatorPkg   License-History.txt  MyPkg            PrmPkg                SignedCapsulePkg     UnitTestFrameworkPkg
+Build           DynamicTablesPkg  FatPkg        License.txt          NetworkPkg       ReadMe.rst            SourceLevelDebugPkg
+egor@Debian:~/git/edk2$ cd MyPkg/
+egor@Debian:~/git/edk2/MyPkg$ ls
+HelloDepo  MyPkg.dsc
+egor@Debian:~/git/edk2/MyPkg$ vim MyPkg.dsc 
+egor@Debian:~/git/edk2/MyPkg$ vim EmulatorPkg/EmulatorPkg.dsc 
+egor@Debian:~/git/edk2/MyPkg$ vim EmulatorPkg/EmulatorPkg.dsc 
+egor@Debian:~/git/edk2/MyPkg$ ls
+HelloDepo  MyPkg.dsc
+egor@Debian:~/git/edk2/MyPkg$ cd -
+/home/egor/git/edk2
+egor@Debian:~/git/edk2$ ls
+ArmPkg          Conf              edksetup.bat  FmpDevicePkg         Maintainers.txt  OvmfPkg               RedfishPkg           StandaloneMmPkg
+ArmPlatformPkg  contrib           edksetup.sh   IntelFsp2Pkg         MdeModulePkg     PcAtChipsetPkg        SecurityPkg          UefiCpuPkg
+ArmVirtPkg      CONTRIBUTING.md   EmbeddedPkg   IntelFsp2WrapperPkg  MdePkg           pip-requirements.txt  ShellPkg             UefiPayloadPkg
+BaseTools       CryptoPkg         EmulatorPkg   License-History.txt  MyPkg            PrmPkg                SignedCapsulePkg     UnitTestFrameworkPkg
+Build           DynamicTablesPkg  FatPkg        License.txt          NetworkPkg       ReadMe.rst            SourceLevelDebugPkg
+egor@Debian:~/git/edk2$ vim EmulatorPkg/EmulatorPkg.dsc 
+egor@Debian:~/git/edk2$ build -p EmulatorPkg/EmulatorPkg.dsc -m MyPkg/HelloDepo/HelloDepo.inf
+Build environment: Linux-6.1.0-37-amd64-x86_64-with-glibc2.36
+Build start time: 00:32:56, Jul.03 2025
+
+WORKSPACE        = /home/egor/git/edk2
+EDK_TOOLS_PATH   = /home/egor/git/edk2/BaseTools
+CONF_PATH        = /home/egor/git/edk2/Conf
+PYTHON_COMMAND   = python3
+
+
+Processing meta-data .
+Architecture(s)  = X64
+Build target     = DEBUG
+Toolchain        = GCC5
+
+Active Platform          = /home/egor/git/edk2/EmulatorPkg/EmulatorPkg.dsc
+Active Module            = /home/egor/git/edk2/MyPkg/HelloDepo/HelloDepo.inf
+
+
+build.py...
+/home/egor/git/edk2/EmulatorPkg/EmulatorPkg.dsc(...): error 4000: Instance of library class [ShellCEntryLib] is not found for module [/home/egor/git/edk2/MyPkg/HelloDepo/HelloDepo.inf], [ShellCEntryLib] is:
+        consumed by /home/egor/git/edk2/MyPkg/HelloDepo/HelloDepo.inf
+ 
+
+- Failed -
+Build end time: 00:32:56, Jul.03 2025
+Build total time: 00:00:01
+
+egor@Debian:~/git/edk2$ ^C
+egor@Debian:~/git/edk2$ 
+egor@Debian:~/git/edk2$ vim MyPkg/HelloDepo/HelloDepo.inf
+egor@Debian:~/git/edk2$ vim MyPkg/HelloDepo/HelloDepo.c
+egor@Debian:~/git/edk2$ build -p EmulatorPkg/EmulatorPkg.dsc -m MyPkg/HelloDepo/HelloDepo.inf
+Build environment: Linux-6.1.0-37-amd64-x86_64-with-glibc2.36
+Build start time: 00:37:42, Jul.03 2025
+
+WORKSPACE        = /home/egor/git/edk2
+EDK_TOOLS_PATH   = /home/egor/git/edk2/BaseTools
+CONF_PATH        = /home/egor/git/edk2/Conf
+PYTHON_COMMAND   = python3
+
+
+Processing meta-data .
+Architecture(s)  = X64
+Build target     = DEBUG
+Toolchain        = GCC5
+
+Active Platform          = /home/egor/git/edk2/EmulatorPkg/EmulatorPkg.dsc
+Active Module            = /home/egor/git/edk2/MyPkg/HelloDepo/HelloDepo.inf
+
+
+build.py...
+/home/egor/git/edk2/EmulatorPkg/EmulatorPkg.dsc(...): error 4000: Instance of library class [ShellCEntryLib] is not found for module [/home/egor/git/edk2/MyPkg/HelloDepo/HelloDepo.inf], [ShellCEntryLib] is:
+        consumed by /home/egor/git/edk2/MyPkg/HelloDepo/HelloDepo.inf
+ 
+
+- Failed -
+Build end time: 00:37:42, Jul.03 2025
+Build total time: 00:00:01
+
+egor@Debian:~/git/edk2$ vim EmulatorPkg/EmulatorPkg.dsc
+egor@Debian:~/git/edk2$ vim MyPkg/HelloDepo/HelloDepo.inf
+egor@Debian:~/git/edk2$ 

@@ -1,0 +1,17 @@
+[Defines]
+  INF_VERSION    = 1.29
+  BASE_NAME      = HelloDepo
+  FILE_GUID      = 12345678-1234-5678-9012-345678901234
+  MODULE_TYPE    = UEFI_APPLICATION
+  ENTRY_POINT    = UefiMain
+  VERSION_STRING = 1.0
+
+[Sources]
+  HelloDepo.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib

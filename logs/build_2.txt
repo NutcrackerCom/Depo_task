@@ -1,0 +1,1025 @@
+
+egor@Debian:~/git/edk2$ FS0:
+HelloDepo.efi
+bash: FS0:: команда не найдена
+bash: HelloDepo.efi: команда не найдена
+egor@Debian:~/git/edk2$ ls
+ArmPkg          Conf              edksetup.bat  FmpDevicePkg         Maintainers.txt  OvmfPkg               RedfishPkg           StandaloneMmPkg
+ArmPlatformPkg  contrib           edksetup.sh   IntelFsp2Pkg         MdeModulePkg     PcAtChipsetPkg        SecurityPkg          UefiCpuPkg
+ArmVirtPkg      CONTRIBUTING.md   EmbeddedPkg   IntelFsp2WrapperPkg  MdePkg           pip-requirements.txt  ShellPkg             UefiPayloadPkg
+BaseTools       CryptoPkg         EmulatorPkg   License-History.txt  MyPkg            PrmPkg                SignedCapsulePkg     UnitTestFrameworkPkg
+Build           DynamicTablesPkg  FatPkg        License.txt          NetworkPkg       ReadMe.rst            SourceLevelDebugPkg
+egor@Debian:~/git/edk2$ cd MyPkg/
+egor@Debian:~/git/edk2/MyPkg$ ls
+HelloDepo  MyPkg.dsc
+egor@Debian:~/git/edk2/MyPkg$ ls -l
+итого 8
+drwxr-xr-x 2 egor egor 4096 июл  3 01:03 HelloDepo
+-rw-r--r-- 1 egor egor  246 июл  3 00:18 MyPkg.dsc
+egor@Debian:~/git/edk2/MyPkg$ ls -la
+итого 16
+drwxr-xr-x  3 egor egor 4096 июл  3 00:26 .
+drwxr-xr-x 39 egor egor 4096 июл  3 00:02 ..
+drwxr-xr-x  2 egor egor 4096 июл  3 01:03 HelloDepo
+-rw-r--r--  1 egor egor  246 июл  3 00:18 MyPkg.dsc
+egor@Debian:~/git/edk2/MyPkg$ cd -
+/home/egor/git/edk2
+egor@Debian:~/git/edk2$ ./Build/EmulatorX64/DEBUG_GCC5/X64/Host
+
+EDK II UNIX Host Emulation Environment from http://www.tianocore.org/edk2/
+  BootMode 0x00
+  OS Emulator passing in 128 KB of temp RAM at 0x40000000 to SEC
+ERROR : Can not open Firmware Device File ../FV/FV_RECOVERY.fd (e).  Exiting.
+egor@Debian:~/git/edk2$ ls
+ArmPkg          Conf              edksetup.bat  FmpDevicePkg         Maintainers.txt  OvmfPkg               RedfishPkg           StandaloneMmPkg
+ArmPlatformPkg  contrib           edksetup.sh   IntelFsp2Pkg         MdeModulePkg     PcAtChipsetPkg        SecurityPkg          UefiCpuPkg
+ArmVirtPkg      CONTRIBUTING.md   EmbeddedPkg   IntelFsp2WrapperPkg  MdePkg           pip-requirements.txt  ShellPkg             UefiPayloadPkg
+BaseTools       CryptoPkg         EmulatorPkg   License-History.txt  MyPkg            PrmPkg                SignedCapsulePkg     UnitTestFrameworkPkg
+Build           DynamicTablesPkg  FatPkg        License.txt          NetworkPkg       ReadMe.rst            SourceLevelDebugPkg
+egor@Debian:~/git/edk2$ cd Build/EmulatorX64/DEBUG_GCC5/
+FV/  X64/ 
+egor@Debian:~/git/edk2$ cd Build/EmulatorX64/DEBUG_GCC5/X64/
+egor@Debian:~/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64$ ./HOST
+bash: ./HOST: Нет такого файла или каталога
+egor@Debian:~/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64$ ls
+ArpDxe.debug              DxeIpl.efi                   FlashMapPei.efi                   NullMemoryTestDxe.efi                   SerialDxe.debug
+ArpDxe.efi                EbcDxe.debug                 FwBlockService.debug              PartitionDxe.debug                      SerialDxe.efi
+AutoScanPei.debug         EbcDxe.efi                   FwBlockService.efi                PartitionDxe.efi                        SetupBrowser.debug
+AutoScanPei.efi           EmuBlockIo.debug             GraphicsConsoleDxe.debug          PcdDxe.debug                            SetupBrowser.efi
+BdsDxe.debug              EmuBlockIo.efi               GraphicsConsoleDxe.efi            PcdDxe.efi                              Shell.debug
+BdsDxe.efi                EmuBusDriver.debug           Hash2DxeCrypto.debug              PcdPeim.debug                           Shell.efi
+BootManagerMenuApp.debug  EmuBusDriver.efi             Hash2DxeCrypto.efi                PcdPeim.efi                             ShellPkg
+BootManagerMenuApp.efi    EmuGopDxe.debug              HelloDepo.debug                   PciBusDxe.debug                         SmbiosDxe.debug
+BootModePei.debug         EmuGopDxe.efi                HelloDepo.efi                     PciBusDxe.efi                           SmbiosDxe.efi
+BootModePei.efi           EmulatorPkg                  HelloWorld.debug                  PeiCore.debug                           StatusCodeHandlerPei.debug
+CapsuleRuntimeDxe.debug   EmuReset.debug               HelloWorld.efi                    PeiCore.efi                             StatusCodeHandlerPei.efi
+CapsuleRuntimeDxe.efi     EmuReset.efi                 HiiDatabase.debug                 PeiVariable.debug                       StatusCodeHandlerRuntimeDxe.debug
+ConPlatformDxe.debug      EmuSec.debug                 HiiDatabase.efi                   PeiVariable.efi                         StatusCodeHandlerRuntimeDxe.efi
+ConPlatformDxe.efi        EmuSec.efi                   Host                              PlatformSmbiosDxe.debug                 TcpDxe.debug
+ConSplitterDxe.debug      EmuSimpleFileSystem.debug    Host.gdb                          PlatformSmbiosDxe.efi                   TcpDxe.efi
+ConSplitterDxe.efi        EmuSimpleFileSystem.efi      Ip4Dxe.debug                      PrintDxe.debug                          TerminalDxe.debug
+Cpu.debug                 EmuSnpDxe.debug              Ip4Dxe.efi                        PrintDxe.efi                            TerminalDxe.efi
+Cpu.efi                   EmuSnpDxe.efi                LoadFileOnFv2.debug               RealTimeClock.debug                     tftpDynamicCommand.debug
+CryptoPkg                 EmuThunk.debug               LoadFileOnFv2.efi                 RealTimeClock.efi                       tftpDynamicCommand.efi
+DevicePathDxe.debug       EmuThunk.efi                 LogoDxe.debug                     ReportStatusCodeRouterPei.debug         ThunkPpiToProtocolPei.debug
+DevicePathDxe.efi         EmuTimer.debug               LogoDxe.efi                       ReportStatusCodeRouterPei.efi           ThunkPpiToProtocolPei.efi
+Dhcp4Dxe.debug            EmuTimer.efi                 MdeModulePkg                      ReportStatusCodeRouterRuntimeDxe.debug  TOOLS_DEF.X64
+Dhcp4Dxe.efi              EnglishDxe.debug             MdePkg                            ReportStatusCodeRouterRuntimeDxe.efi    Udp4Dxe.debug
+DiskIoDxe.debug           EnglishDxe.efi               Metronome.debug                   RngDxe.debug                            Udp4Dxe.efi
+DiskIoDxe.efi             Fat.debug                    Metronome.efi                     RngDxe.efi                              UefiPxeBcDxe.debug
+DisplayEngine.debug       Fat.efi                      MnpDxe.debug                      RuntimeDxe.debug                        UefiPxeBcDxe.efi
+DisplayEngine.efi         FatPkg                       MnpDxe.efi                        RuntimeDxe.efi                          UiApp.debug
+DpcDxe.debug              FaultTolerantWriteDxe.debug  MonotonicCounterRuntimeDxe.debug  ScsiBus.debug                           UiApp.efi
+DpcDxe.efi                FaultTolerantWriteDxe.efi    MonotonicCounterRuntimeDxe.efi    ScsiBus.efi                             VariableRuntimeDxe.debug
+DriverSample.debug        FaultTolerantWritePei.debug  Mtftp4Dxe.debug                   ScsiDisk.debug                          VariableRuntimeDxe.efi
+DriverSample.efi          FaultTolerantWritePei.efi    Mtftp4Dxe.efi                     ScsiDisk.efi                            VlanConfigDxe.debug
+DxeCore.debug             FirmwareVolumePei.debug      MyPkg                             SecurityPkg                             VlanConfigDxe.efi
+DxeCore.efi               FirmwareVolumePei.efi        NetworkPkg                        SecurityStubDxe.debug                   WatchdogTimer.debug
+DxeIpl.debug              FlashMapPei.debug            NullMemoryTestDxe.debug           SecurityStubDxe.efi                     WatchdogTimer.efi
+egor@Debian:~/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64$ ./Host
+
+EDK II UNIX Host Emulation Environment from http://www.tianocore.org/edk2/
+  BootMode 0x00
+  OS Emulator passing in 128 KB of temp RAM at 0x40000000 to SEC
+  FD loaded from ../FV/FV_RECOVERY.fd at 0x102000000 contains SEC Core
+
+0x102000400 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/EmulatorPkg/Sec/Sec/DEBUG/EmuSec.dll with entry point 0x1020015ff
+SEC Has Started
+0x102002600 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Core/Pei/PeiMain/DEBUG/PeiCore.dll with entry point 0x10200b6e9
+0x102014100 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/ReportStatusCodeRouter/Pei/ReportStatusCodeRouterPei/DEBUG/ReportStatusCodeRouterPei.dll with entry point 0x102014e2c
+0x102015980 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/StatusCodeHandler/Pei/StatusCodeHandlerPei/DEBUG/StatusCodeHandlerPei.dll with entry point 0x1020172fe
+PROGRESS CODE: V03020003 I0
+Loading PEIM 9B3ADA4F-AE56-4C24-8DEA-F03B7558AE50
+0x10200efc0 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/PCD/Pei/Pcd/DEBUG/PcdPeim.dll with entry point 0x102012a28
+Loading PEIM at 0x0010200ED80 EntryPoint=0x00102012A28 PcdPeim.efi
+PROGRESS CODE: V03020002 I0
+Install PPI: 06E81C58-4AD7-44BC-8390-F10265F72480
+Install PPI: 01F34D25-4DE2-23AD-3FF3-36353FF323F1
+Install PPI: 4D8B155B-C059-4C8F-8926-06FD4331DB8A
+Install PPI: A60C6B59-E459-425D-9C69-0BCC9CB27D81
+Register PPI Notify: 605EA650-C65C-42E1-BA80-91A52AB618C6
+PROGRESS CODE: V03020003 I0
+Loading PEIM 64196C76-58E3-0B4D-9484-B54F7C4349CA
+0x102018380 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/EmulatorPkg/BootModePei/BootModePei/DEBUG/BootModePei.dll with entry point 0x102018c5c
+Loading PEIM at 0x00102018140 EntryPoint=0x00102018C5C BootModePei.efi
+PROGRESS CODE: V03020002 I0
+Emu Boot Mode PEIM Loaded
+Install PPI: 7408D748-FC8C-4EE6-9288-C4BEC092A410
+PROGRESS CODE: V03020003 I0
+Loading PEIM 2D6F6BCC-9681-8E42-8579-B57DCD0060F0
+0x102019600 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/EmulatorPkg/AutoScanPei/AutoScanPei/DEBUG/AutoScanPei.dll with entry point 0x102019ff3
+Loading PEIM at 0x001020193C0 EntryPoint=0x00102019FF3 AutoScanPei.efi
+PROGRESS CODE: V03020002 I0
+Emu Autoscan PEIM Loaded
+PeiInstallPeiMemory MemoryBegin 0x41000000, MemoryLength 0x4000000
+PROGRESS CODE: V03020003 I0
+Temp Stack : BaseAddress=0x40000000 Length=0x10000
+Temp Heap  : BaseAddress=0x40010000 Length=0x10000
+Total temporary memory:    131072 bytes.
+  temporary memory stack ever used:       65532 bytes.
+  temporary memory heap used for HobList: 4432 bytes.
+  temporary memory heap occupied by memory pages: 0 bytes.
+Old Stack size 65536, New stack size 131072
+Stack Hob: BaseAddress=0x41000000 Length=0x20000
+Heap Offset = 0x1010000 Stack Offset = 0x1010000
+Loading PEIM 52C05B14-0B98-496C-BC3B-04B50211D680
+0x44ff3240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Core/Pei/PeiMain/DEBUG/PeiCore.dll with entry point 0x44ffc329
+Loading PEIM at 0x00044FF3000 EntryPoint=0x00044FFC329 PeiCore.efi
+Reinstall PPI: 8C8CE578-8A3D-4F1C-9935-896185C32DD3
+Reinstall PPI: 5473C07A-3DCB-4DCA-BD6F-1E9689E7349A
+Reinstall PPI: B9E0ABFE-5979-4914-977F-6DEE78C278A6
+Install PPI: F894643D-C449-42D1-8EA8-85BDD8C65BDE
+Loading PEIM 9B3ADA4F-AE56-4C24-8DEA-F03B7558AE50
+0x44fed240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/PCD/Pei/Pcd/DEBUG/PcdPeim.dll with entry point 0x44ff0ca8
+Loading PEIM at 0x00044FED000 EntryPoint=0x00044FF0CA8 PcdPeim.efi
+Reinstall PPI: 06E81C58-4AD7-44BC-8390-F10265F72480
+Reinstall PPI: 4D8B155B-C059-4C8F-8926-06FD4331DB8A
+Reinstall PPI: 01F34D25-4DE2-23AD-3FF3-36353FF323F1
+Reinstall PPI: A60C6B59-E459-425D-9C69-0BCC9CB27D81
+Loading PEIM 6DB075DE-449E-2644-96D0-CC5A1B4C3B2A
+0x44feb240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/EmulatorPkg/FirmwareVolumePei/FirmwareVolumePei/DEBUG/FirmwareVolumePei.dll with entry point 0x44febce3
+Loading PEIM at 0x00044FEB000 EntryPoint=0x00044FEBCE3 FirmwareVolumePei.efi
+PROGRESS CODE: V03020002 I0
+Unix Firmware Volume PEIM Loaded
+PROGRESS CODE: V03020003 I0
+Loading PEIM C9FAF091-57F8-A64C-A07A-445B124F0D93
+0x44fe9240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/EmulatorPkg/FlashMapPei/FlashMapPei/DEBUG/FlashMapPei.dll with entry point 0x44fe9ba4
+Loading PEIM at 0x00044FE9000 EntryPoint=0x00044FE9BA4 FlashMapPei.efi
+PROGRESS CODE: V03020002 I0
+EmulatorPkg Flash Map PEIM Loaded
+PROGRESS CODE: V03020003 I0
+Loading PEIM C32A66D5-D8B7-2640-B768-082C8F083C37
+0x44fe7240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/EmulatorPkg/ThunkPpiToProtocolPei/ThunkPpiToProtocolPei/DEBUG/ThunkPpiToProtocolPei.dll with entry point 0x44fe7b26
+Loading PEIM at 0x00044FE7000 EntryPoint=0x00044FE7B26 ThunkPpiToProtocolPei.efi
+PROGRESS CODE: V03020002 I0
+Emu Thunk PEIM Loaded
+PROGRESS CODE: V03020003 I0
+Loading PEIM AAC33064-9ED0-4B89-A5AD-3EA767960B22
+0x44fe5240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/FaultTolerantWritePei/FaultTolerantWritePei/DEBUG/FaultTolerantWritePei.dll with entry point 0x44fe5fbc
+Loading PEIM at 0x00044FE5000 EntryPoint=0x00044FE5FBC FaultTolerantWritePei.efi
+PROGRESS CODE: V03020002 I0
+Install PPI: 1D3E9CB8-43AF-490B-830A-3516AA532047
+PROGRESS CODE: V03020003 I0
+Loading PEIM 34C8C28F-B61C-45A2-8F2E-89E46BECC63B
+0x44fe1240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/Variable/Pei/VariablePei/DEBUG/PeiVariable.dll with entry point 0x44fe3678
+Loading PEIM at 0x00044FE1000 EntryPoint=0x00044FE3678 PeiVariable.efi
+PROGRESS CODE: V03020002 I0
+Register PPI Notify: F894643D-C449-42D1-8EA8-85BDD8C65BDE
+Notify: PPI Guid: F894643D-C449-42D1-8EA8-85BDD8C65BDE, Peim notify entry point: 44FE289D
+PeiVariable: CACHE_INFO_FLAG Buffer is: 0x44FE0000, number of pages is: 0x1
+PeiVariable: Volatile cache Buffer is: 0x44FD0000, number of pages is: 0x10
+PeiVariable: NV cache Buffer is: 0x44FC4000, number of pages is: 0xC
+PeiVariable: HOB cache Buffer is: 0x0, number of pages is: 0x0
+Install PPI: 2AB86EF5-ECB5-4134-B556-3854CA1FE1B4
+PROGRESS CODE: V03020003 I0
+Loading PEIM 86D70125-BAA3-4296-A62F-602BEBBB9081
+0x44fc0240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Core/DxeIplPeim/DxeIpl/DEBUG/DxeIpl.dll with entry point 0x44fc2e64
+Loading PEIM at 0x00044FC0000 EntryPoint=0x00044FC2E64 DxeIpl.efi
+PROGRESS CODE: V03020002 I0
+PROGRESS CODE: V03020003 I0
+Install PPI: 1A36E4E7-FAB6-476A-8E75-695A0576FDD7
+Install PPI: 0AE8CE5D-E448-4437-A8D7-EBF5F194F731
+DXE IPL Entry
+Loading PEIM D6A2CB7F-6A18-4E2F-B43B-9920A733700A
+0x44f72240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Core/Dxe/DxeMain/DEBUG/DxeCore.dll with entry point 0x44f86180
+Loading PEIM at 0x00044F72000 EntryPoint=0x00044F86180 DxeCore.efi
+PROGRESS CODE: V03021001 I0
+Loading DXE CORE at 0x00044F72000 EntryPoint=0x00044F86180
+Install PPI: 605EA650-C65C-42E1-BA80-91A52AB618C6
+Notify: PPI Guid: 605EA650-C65C-42E1-BA80-91A52AB618C6, Peim notify entry point: 1020066E1
+PeiDelayedDispatchOnEndOfPei Count of dispatch cycles is 0
+Notify: PPI Guid: 605EA650-C65C-42E1-BA80-91A52AB618C6, Peim notify entry point: 1020108B4
+DxeMain: MemoryBaseAddress=0x41022000 MemoryLength=0x3F30000
+0x44f72240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Core/Dxe/DxeMain/DEBUG/DxeCore.dll with entry point 0x44f86180
+HOBLIST address in DXE = 0x44F4E018
+Memory Allocation 0x00000004 0x44F52000 - 0x44F71FFF
+Memory Allocation 0x00000003 0x44FF3000 - 0x44FFFFFF
+Memory Allocation 0x00000003 0x44FED000 - 0x44FF2FFF
+Memory Allocation 0x00000003 0x44FEB000 - 0x44FECFFF
+Memory Allocation 0x00000003 0x44FE9000 - 0x44FEAFFF
+Memory Allocation 0x00000003 0x44FE7000 - 0x44FE8FFF
+Memory Allocation 0x00000003 0x44FE5000 - 0x44FE6FFF
+Memory Allocation 0x00000003 0x44FE1000 - 0x44FE4FFF
+Memory Allocation 0x00000006 0x44FE0000 - 0x44FE0FFF
+Memory Allocation 0x00000006 0x44FD0000 - 0x44FDFFFF
+Memory Allocation 0x00000006 0x44FC4000 - 0x44FCFFFF
+Memory Allocation 0x00000003 0x44FC0000 - 0x44FC3FFF
+Memory Allocation 0x00000004 0x44FBC000 - 0x44FBFFFF
+Memory Allocation 0x00000004 0x44F97000 - 0x44FBBFFF
+Memory Allocation 0x00000003 0x44F72000 - 0x44F96FFF
+Memory Allocation 0x00000003 0x44F72000 - 0x44F96FFF
+Memory Allocation 0x00000004 0x44F52000 - 0x44F71FFF
+Memory Allocation 0x00000004 0x41000000 - 0x4101FFFF
+FV Hob            0x102000000 - 0x10257FFFF
+FV Hob            0x102580000 - 0x10259FFFF
+InstallProtocolInterface: D8117CFE-94A6-11D4-9A3A-0090273FC14D 44F94CE0
+InstallProtocolInterface: 8F644FA9-E850-4DB1-9CE2-0B44698E8DA4 44F48BB0
+InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B 44F48E98
+InstallProtocolInterface: 8F644FA9-E850-4DB1-9CE2-0B44698E8DA4 44F487B0
+InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B 44F48918
+InstallProtocolInterface: 220E73B6-6BDB-4413-8405-B974B108619A 44F47CB0
+InstallProtocolInterface: EE4E5898-3914-4259-9D6E-DC7BD79403CF 44F94BF8
+InstallProtocolInterface: FC1BCDB0-7D31-49AA-936A-A4600D9DD083 44F94BF8
+Loading driver 80CF7257-87AB-47F9-A3FE-D50B76D89541
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44D54040
+0x44d4e240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/PCD/Dxe/Pcd/DEBUG/PcdDxe.dll with entry point 0x44d52483
+Loading driver at 0x00044D4E000 EntryPoint=0x00044D52483 PcdDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44D54E18
+ProtectUefiImageCommon - 0x44D54040
+  - 0x0000000044D4E000 - 0x0000000000005D80
+InstallProtocolInterface: 11B34006-D85B-4D0A-A290-D5A571310EF7 44D539A0
+InstallProtocolInterface: 13A3F0F6-264A-3EF0-F2E0-DEC512342F34 44D53900
+InstallProtocolInterface: 5BE40F57-FA68-4610-BBBF-E9C5FCDAD365 44D538D0
+InstallProtocolInterface: FD0F4478-0EFD-461D-BA2D-E58C45FD5F5E 44D538B0
+Loading driver C8339973-A563-4561-B858-D8476F9DEFC4
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44D5A0C0
+0x44d4a240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/Metronome/Metronome/DEBUG/Metronome.dll with entry point 0x44d4af49
+Loading driver at 0x00044D4A000 EntryPoint=0x00044D4AF49 Metronome.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44D5A918
+ProtectUefiImageCommon - 0x44D5A0C0
+  - 0x0000000044D4A000 - 0x0000000000001900
+InstallProtocolInterface: 26BACCB2-6F42-11D4-BCE7-0080C73C8881 44D4B6E0
+Loading driver D93CE3D8-A7EB-4730-8C8E-CC466A9ECC3C
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44D55B40
+0x44d3e240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/ReportStatusCodeRouter/RuntimeDxe/ReportStatusCodeRouterRuntimeDxe/DEBUG/ReportStatusCodeRouterRuntimeDxe.dll with entry point 0x44d3f961
+Loading driver at 0x00044D3E000 EntryPoint=0x00044D3F961 ReportStatusCodeRouterRuntimeDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44D55A18
+ProtectUefiImageCommon - 0x44D55B40
+  - 0x0000000044D3E000 - 0x00000000000026C0
+InstallProtocolInterface: 86212936-0E76-41C8-A03A-2AF2FC1C39E2 44D403F0
+InstallProtocolInterface: D2B2B828-0826-48A7-B3DF-983C006024F0 44D403D0
+Loading driver F3552032-8985-11DB-8429-0040D02B1835
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44D41040
+0x44d38240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/EmulatorPkg/RealTimeClockRuntimeDxe/RealTimeClock/DEBUG/RealTimeClock.dll with entry point 0x44d38e4f
+Loading driver at 0x00044D38000 EntryPoint=0x00044D38E4F RealTimeClock.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44D41E18
+ProtectUefiImageCommon - 0x44D41040
+  - 0x0000000044D38000 - 0x0000000000001680
+InstallProtocolInterface: 27CFAC87-46CC-11D4-9A38-0090273FC14D 0
+Loading driver 50A18017-37AD-8743-BCF2-DF1A8FF12FAB
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44D413C0
+0x44d32240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/EmulatorPkg/ResetRuntimeDxe/Reset/DEBUG/EmuReset.dll with entry point 0x44d32d90
+Loading driver at 0x00044D32000 EntryPoint=0x00044D32D90 EmuReset.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44D41818
+ProtectUefiImageCommon - 0x44D413C0
+  - 0x0000000044D32000 - 0x0000000000001540
+InstallProtocolInterface: 27CFAC88-46CC-11D4-9A38-0090273FC14D 0
+Loading driver B601F8C4-43B7-4784-95B1-F4226CB40CEE
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44D350C0
+0x44d26240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Core/RuntimeDxe/RuntimeDxe/DEBUG/RuntimeDxe.dll with entry point 0x44d27489
+Loading driver at 0x00044D26000 EntryPoint=0x00044D27489 RuntimeDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44D35318
+ProtectUefiImageCommon - 0x44D350C0
+  - 0x0000000044D26000 - 0x00000000000022C0
+InstallProtocolInterface: B7DFB4E1-052F-449F-87BE-9818FC91B733 44D28080
+Loading driver A01E498C-96E8-2A4C-95F4-85248F989753
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44D34040
+0x44d1d240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/EmulatorPkg/FvbServicesRuntimeDxe/FvbServicesRuntimeDxe/DEBUG/FwBlockService.dll with entry point 0x44d1eaf2
+Loading driver at 0x00044D1D000 EntryPoint=0x00044D1EAF2 FwBlockService.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44D34D98
+ProtectUefiImageCommon - 0x44D34040
+  - 0x0000000044D1D000 - 0x0000000000002C40
+InstallProtocolInterface: 8F644FA9-E850-4DB1-9CE2-0B44698E8DA4 44D22048
+InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B 44D22020
+InstallProtocolInterface: 220E73B6-6BDB-4413-8405-B974B108619A 44D344B0
+FvImage on FvHandle 44D34C98 and 44F48D98 has the same FvNameGuid 6D99E806-3D38-42C2-A095-5F4300BFD7DC.
+Loading driver F80697E9-7FD6-4665-8646-88E33EF71DFC
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44D1C240
+0x44cfb240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/SecurityStubDxe/SecurityStubDxe/DEBUG/SecurityStubDxe.dll with entry point 0x44cffa7e
+Loading driver at 0x00044CFB000 EntryPoint=0x00044CFFA7E SecurityStubDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44D03F98
+ProtectUefiImageCommon - 0x44D1C240
+  - 0x0000000044CFB000 - 0x0000000000007480
+InstallProtocolInterface: 94AB2F58-1438-4EF1-9152-18941A3A0E68 44D01D38
+InstallProtocolInterface: A46423E3-4617-49F1-B9FF-D1BFA9115839 44D01D30
+InstallProtocolInterface: 15853D7C-3DDF-43E0-A1CB-EBF85B8F872C 44D01D10
+Loading driver 13AC6DD0-73D0-11D4-B06B-00AA00BD6DE7
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44D032C0
+0x44ce9240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/EbcDxe/EbcDxe/DEBUG/EbcDxe.dll with entry point 0x44ced764
+Loading driver at 0x00044CE9000 EntryPoint=0x00044CED764 EbcDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44D05F98
+ProtectUefiImageCommon - 0x44D032C0
+  - 0x0000000044CE9000 - 0x0000000000005C40
+InstallProtocolInterface: 13AC6DD1-73D0-11D4-B06B-00AA00BD6DE7 44D05E98
+InstallProtocolInterface: 96F46153-97A7-4793-ACC1-FA19BF78EA97 44CEE580
+InstallProtocolInterface: 2755590C-6F3C-42FA-9EA4-A3BA543CDA25 44D05798
+InstallProtocolInterface: AAEACCFD-F27B-4C17-B610-75CA1F2DFB52 44D05118
+Loading driver 96B5C032-DF4C-4B6E-8232-438DCF448D0E
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44D05240
+0x44ce7240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/MemoryTest/NullMemoryTestDxe/NullMemoryTestDxe/DEBUG/NullMemoryTestDxe.dll with entry point 0x44ce7f5e
+Loading driver at 0x00044CE7000 EntryPoint=0x00044CE7F5E NullMemoryTestDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44D04E18
+ProtectUefiImageCommon - 0x44D05240
+  - 0x0000000044CE7000 - 0x00000000000018C0
+InstallProtocolInterface: 309DE7F1-7F5E-4ACE-B49C-531BE5AA95EF 44CE8660
+Loading driver 2F62A818-4A72-CD40-90B9-FF00DAABEE7B
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44D04140
+0x44ce1240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/EmulatorPkg/EmuThunkDxe/EmuThunk/DEBUG/EmuThunk.dll with entry point 0x44ce1d09
+Loading driver at 0x00044CE1000 EntryPoint=0x00044CE1D09 EmuThunk.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44D04718
+ProtectUefiImageCommon - 0x44D04140
+  - 0x0000000044CE1000 - 0x00000000000014C0
+InstallProtocolInterface: 5CF32E0B-8EDF-2E44-9CDA-93205E99EC1C 55823274A580
+InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B 44CE2300
+Loading driver CBD2E4D5-7068-4FF5-B462-9822B4AD8D60
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44CE40C0
+0x44ca9240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/Variable/RuntimeDxe/VariableRuntimeDxe/DEBUG/VariableRuntimeDxe.dll with entry point 0x44cb258a
+Loading driver at 0x00044CA9000 EntryPoint=0x00044CB258A VariableRuntimeDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44CE4A98
+ProtectUefiImageCommon - 0x44CE40C0
+  - 0x0000000044CA9000 - 0x000000000000DA80
+InstallProtocolInterface: CD3D0A05-9E24-437C-A891-1EE053DB7638 44CB62E0
+InstallProtocolInterface: AF23B340-97B4-4685-8D4F-A3F28169B21D 44CB62B0
+InstallProtocolInterface: 1E5668E2-8481-11D4-BCF1-0080C73C8881 0
+InstallProtocolInterface: 81D1675C-86F6-48DF-BD95-9A6E4F0925C3 44CB6240
+Loading driver 9A5163E7-5C29-453F-825C-837A46A81E15
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44CB7840
+0x44c94240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/SerialDxe/SerialDxe/DEBUG/SerialDxe.dll with entry point 0x44c94581
+Loading driver at 0x00044C94000 EntryPoint=0x00044C94581 SerialDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44C97E98
+ProtectUefiImageCommon - 0x44CB7840
+  - 0x0000000044C94000 - 0x0000000000000980
+InstallProtocolInterface: BB25CF6F-F1D4-11D2-9A0C-0090273FC1FD 44C946E0
+InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B 44C94780
+Loading driver 9B680FCE-AD6B-4F3A-B60B-F59899003443
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44C97AC0
+0x44c60240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/DevicePathDxe/DevicePathDxe/DEBUG/DevicePathDxe.dll with entry point 0x44c690d2
+Loading driver at 0x00044C60000 EntryPoint=0x00044C690D2 DevicePathDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44C96B98
+ProtectUefiImageCommon - 0x44C97AC0
+  - 0x0000000044C60000 - 0x000000000000C540
+InstallProtocolInterface: 0379BE4E-D706-437D-B037-EDB82FB772A4 44C6B780
+InstallProtocolInterface: 8B843E20-8132-4852-90CC-551A4E4A7F1C 44C6B760
+InstallProtocolInterface: 05C99A21-C70F-4AD2-8A5F-35DF3343F51E 44C6B740
+Loading driver F9D88642-0737-49BC-81B5-6889CD57D9EA
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44C95740
+0x44c5c240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/SmbiosDxe/SmbiosDxe/DEBUG/SmbiosDxe.dll with entry point 0x44c5e821
+Loading driver at 0x00044C5C000 EntryPoint=0x00044C5E821 SmbiosDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44C95518
+ProtectUefiImageCommon - 0x44C95740
+  - 0x0000000044C5C000 - 0x0000000000003AC0
+InstallProtocolInterface: 03583FF6-CB36-4940-947E-B9B39F4AFAF7 44C5F8B0
+Loading driver 348C4D62-BFBD-4882-9ECE-C80BB1C4783B
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44C71B40
+0x447c0240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/HiiDatabaseDxe/HiiDatabaseDxe/DEBUG/HiiDatabase.dll with entry point 0x447d9f24
+Loading driver at 0x000447C0000 EntryPoint=0x000447D9F24 HiiDatabase.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44C71098
+ProtectUefiImageCommon - 0x44C71B40
+  - 0x00000000447C0000 - 0x000000000001F4C0
+InstallProtocolInterface: E9CA4775-8657-47FC-97E7-7ED65A084324 447DEFA8
+InstallProtocolInterface: 0FD96974-23AA-4CDC-B9CB-98D17750322A 447DF020
+InstallProtocolInterface: EF9FC172-A1B2-4693-B327-6D32FC416042 447DF048
+InstallProtocolInterface: 587E72D7-CC50-4F79-8209-CA291FC1A10F 447DF0A0
+InstallProtocolInterface: 0A8BADD5-03B8-4D19-B128-7B8F0EDAA596 447DF0D0
+InstallProtocolInterface: 31A6406A-6BDF-4E46-B2A2-EBAA89C40920 447DEFC8
+InstallProtocolInterface: 1A1241E6-8F19-41A9-BC0E-E8EF39E06546 447DEFF0
+Loading driver 79E4A61C-ED73-4312-94FE-E3E7563362A9
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44C700C0
+0x44c0c240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/PrintDxe/PrintDxe/DEBUG/PrintDxe.dll with entry point 0x44c0e66b
+Loading driver at 0x00044C0C000 EntryPoint=0x00044C0E66B PrintDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44C70D18
+ProtectUefiImageCommon - 0x44C700C0
+  - 0x0000000044C0C000 - 0x0000000000003800
+InstallProtocolInterface: F05976EF-83F1-4F3D-8619-F7595D41E538 44C0F5E0
+InstallProtocolInterface: 0CC252D2-C106-4661-B5BD-3147A4F81F92 44C0F580
+Loading driver BD712601-082F-4C59-8677-2C8A3C297948
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44C10040
+0x44c06240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/LoadFileOnFv2/LoadFileOnFv2/DEBUG/LoadFileOnFv2.dll with entry point 0x44c07c17
+Loading driver at 0x00044C06000 EntryPoint=0x00044C07C17 LoadFileOnFv2.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44C10E18
+ProtectUefiImageCommon - 0x44C10040
+  - 0x0000000044C06000 - 0x00000000000026C0
+InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B 44C10718
+InstallProtocolInterface: 56EC3091-954C-11D2-8E3F-00A0C969723B 44C108A0
+InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B 44C0BD18
+InstallProtocolInterface: 56EC3091-954C-11D2-8E3F-00A0C969723B 44C0BDA0
+InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B 44C0B498
+InstallProtocolInterface: 56EC3091-954C-11D2-8E3F-00A0C969723B 44C0B620
+Loading driver B981A835-6EE8-4F4C-AE0B-210AA0BFBF01
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44C09040
+0x442a1240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/SecurityPkg/RandomNumberGenerator/RngDxe/RngDxe/DEBUG/RngDxe.dll with entry point 0x442a282a
+Loading driver at 0x000442A1000 EntryPoint=0x000442A282A RngDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44C09E18
+ProtectUefiImageCommon - 0x44C09040
+  - 0x00000000442A1000 - 0x0000000000002680
+InstallProtocolInterface: 3152BCA5-EADE-433D-862E-C01CDC291F44 442A3410
+Loading driver A210F973-229D-4F4D-AA37-9895E6C9EABA
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44C09440
+0x4429d240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/NetworkPkg/DpcDxe/DpcDxe/DEBUG/DpcDxe.dll with entry point 0x4429df72
+Loading driver at 0x0004429D000 EntryPoint=0x0004429DF72 DpcDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 442A4F98
+ProtectUefiImageCommon - 0x44C09440
+  - 0x000000004429D000 - 0x0000000000001940
+InstallProtocolInterface: 480F8AE9-0C46-4AA9-BC89-DB9FBA619806 4429E540
+Loading driver 6C2004EF-4E0E-4BE4-B14C-340EB4AA5891
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 442A4140
+0x44291240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/StatusCodeHandler/RuntimeDxe/StatusCodeHandlerRuntimeDxe/DEBUG/StatusCodeHandlerRuntimeDxe.dll with entry point 0x44292621
+Loading driver at 0x00044291000 EntryPoint=0x00044292621 StatusCodeHandlerRuntimeDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 442A4398
+ProtectUefiImageCommon - 0x442A4140
+  - 0x0000000044291000 - 0x00000000000024C0
+PROGRESS CODE: V03040003 I0
+Loading driver F3794B60-8985-11DB-8E53-0040D02B1835
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 4429FB40
+0x44281240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/EmulatorPkg/CpuRuntimeDxe/Cpu/DEBUG/Cpu.dll with entry point 0x4428362d
+Loading driver at 0x00044281000 EntryPoint=0x0004428362D Cpu.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 4429FA18
+ProtectUefiImageCommon - 0x4429FB40
+  - 0x0000000044281000 - 0x0000000000003B80
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 3FDDA605-A76E-4F46-AD29-12F4531B3D08 442848A0
+SmbiosAdd: Smbios type 4 with size 0x79 is added to 32-bit table
+SmbiosAdd: Smbios type 4 with size 0x79 is added to 64-bit table
+SmbiosCreateTable: Initialize 32-bit entry point structure
+SmbiosCreateTable() re-allocate SMBIOS 32-bit table
+SmbiosCreateTable: Initialize 64-bit entry point structure
+SmbiosCreate64BitTable() re-allocate SMBIOS 64-bit table
+InstallProtocolInterface: 26BACCB1-6F42-11D4-BCE7-0080C73C8881 44284810
+InstallProtocolInterface: AD61F191-AE5F-4C0E-B9FA-E869D288C64F 44284858
+MemoryProtectionCpuArchProtocolNotify:
+PROGRESS CODE: V03040003 I0
+Loading driver FE5CEA76-4F72-49E8-986F-2CD899DFFE5D
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44296140
+0x44269240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/FaultTolerantWriteDxe/FaultTolerantWriteDxe/DEBUG/FaultTolerantWriteDxe.dll with entry point 0x4426cef2
+Loading driver at 0x00044269000 EntryPoint=0x0004426CEF2 FaultTolerantWriteDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44296D18
+ProtectUefiImageCommon - 0x44296140
+  - 0x0000000044269000 - 0x0000000000005140
+PROGRESS CODE: V03040002 I0
+Ftw: FtwWorkSpaceLba - 0x0, WorkBlockSize  - 0x10000, FtwWorkSpaceBase - 0xE000
+Ftw: FtwSpareLba     - 0x1, SpareBlockSize - 0x10000
+Ftw: NumberOfWorkBlock - 0x1, FtwWorkBlockLba - 0x0
+Ftw: WorkSpaceLbaInSpare - 0x0, WorkSpaceBaseInSpare - 0xE000
+Ftw: Remaining work space size - 1FE0
+InstallProtocolInterface: 3EBD9E82-2C78-4DE6-9786-8D4BFCB7C881 44272028
+RecordSecureBootPolicyVarData GetVariable SecureBoot Status E
+InstallProtocolInterface: 6441F818-6362-4E44-B570-7DBA31DD2453 0
+PROGRESS CODE: V03040003 I0
+Loading driver 67FA951E-4FA2-9F4E-A658-4DBD954AC22E
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44286040
+0x44260240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/EmulatorPkg/PlatformSmbiosDxe/PlatformSmbiosDxe/DEBUG/PlatformSmbiosDxe.dll with entry point 0x442611e0
+Loading driver at 0x00044260000 EntryPoint=0x000442611E0 PlatformSmbiosDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44286D18
+ProtectUefiImageCommon - 0x44286040
+  - 0x0000000044260000 - 0x00000000000023C0
+PROGRESS CODE: V03040002 I0
+SmbiosAdd: Smbios type 0 with size 0x4F is added to 32-bit table
+SmbiosAdd: Smbios type 0 with size 0x4F is added to 64-bit table
+SmbiosAdd: Smbios type 1 with size 0x6B is added to 32-bit table
+SmbiosAdd: Smbios type 1 with size 0x6B is added to 64-bit table
+SmbiosAdd: Smbios type 2 with size 0x79 is added to 32-bit table
+SmbiosAdd: Smbios type 2 with size 0x79 is added to 64-bit table
+SmbiosAdd: Smbios type 3 with size 0x73 is added to 32-bit table
+SmbiosAdd: Smbios type 3 with size 0x73 is added to 64-bit table
+SmbiosAdd: Smbios type 8 with size 0x1B is added to 32-bit table
+SmbiosAdd: Smbios type 8 with size 0x1B is added to 64-bit table
+SmbiosAdd: Smbios type 8 with size 0x17 is added to 32-bit table
+SmbiosAdd: Smbios type 8 with size 0x17 is added to 64-bit table
+SmbiosAdd: Smbios type 8 with size 0x13 is added to 32-bit table
+SmbiosAdd: Smbios type 8 with size 0x13 is added to 64-bit table
+SmbiosAdd: Smbios type 8 with size 0xF is added to 32-bit table
+SmbiosAdd: Smbios type 8 with size 0xF is added to 64-bit table
+SmbiosAdd: Smbios type 8 with size 0xF is added to 32-bit table
+SmbiosAdd: Smbios type 8 with size 0xF is added to 64-bit table
+SmbiosAdd: Smbios type 8 with size 0xF is added to 32-bit table
+SmbiosAdd: Smbios type 8 with size 0xF is added to 64-bit table
+SmbiosAdd: Smbios type 8 with size 0xF is added to 32-bit table
+SmbiosAdd: Smbios type 8 with size 0xF is added to 64-bit table
+SmbiosAdd: Smbios type 8 with size 0x18 is added to 32-bit table
+SmbiosAdd: Smbios type 8 with size 0x18 is added to 64-bit table
+SmbiosAdd: Smbios type 8 with size 0x19 is added to 32-bit table
+SmbiosAdd: Smbios type 8 with size 0x19 is added to 64-bit table
+SmbiosAdd: Smbios type 9 with size 0x21 is added to 32-bit table
+SmbiosAdd: Smbios type 9 with size 0x21 is added to 64-bit table
+SmbiosAdd: Smbios type 11 with size 0x42 is added to 32-bit table
+SmbiosAdd: Smbios type 11 with size 0x42 is added to 64-bit table
+SmbiosAdd: Smbios type 12 with size 0x51 is added to 32-bit table
+SmbiosAdd: Smbios type 12 with size 0x51 is added to 64-bit table
+SmbiosAdd: Smbios type 16 with size 0x19 is added to 32-bit table
+SmbiosAdd: Smbios type 16 with size 0x19 is added to 64-bit table
+SmbiosAdd: Smbios type 17 with size 0x82 is added to 32-bit table
+SmbiosAdd: Smbios type 17 with size 0x82 is added to 64-bit table
+SmbiosAdd: Smbios type 32 with size 0xF is added to 32-bit table
+SmbiosAdd: Smbios type 32 with size 0xF is added to 64-bit table
+SmbiosAdd: Smbios type 32 with size 0xD is added to 32-bit table
+SmbiosAdd: Smbios type 32 with size 0xD is added to 64-bit table
+SmbiosAdd: Smbios type 19 with size 0x21 is added to 32-bit table
+SmbiosAdd: Smbios type 19 with size 0x21 is added to 64-bit table
+SmbiosAdd: Smbios type 19 with size 0x21 is added to 32-bit table
+SmbiosAdd: Smbios type 19 with size 0x21 is added to 64-bit table
+PROGRESS CODE: V03040003 I0
+Loading driver EBF342FE-B1D3-4EF8-957C-8048606FF671
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 442641C0
+0x441f8240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/SetupBrowserDxe/SetupBrowserDxe/DEBUG/SetupBrowser.dll with entry point 0x44209532
+Loading driver at 0x000441F8000 EntryPoint=0x00044209532 SetupBrowser.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44264798
+ProtectUefiImageCommon - 0x442641C0
+  - 0x00000000441F8000 - 0x0000000000019A00
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: B9D4C360-BCFB-4F9B-9298-53C136982258 44211430
+InstallProtocolInterface: A770C357-B693-4E6D-A6CF-D21C728E550B 44211460
+InstallProtocolInterface: 1F73B18D-4630-43C1-A1DE-6F80855D7DA4 44211440
+PROGRESS CODE: V03040003 I0
+Loading driver F74D20EE-37E7-48FC-97F7-9B1047749C69
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 442631C0
+0x44218240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Logo/LogoDxe/DEBUG/LogoDxe.dll with entry point 0x44218c1c
+Loading driver at 0x00044218000 EntryPoint=0x00044218C1C LogoDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44263698
+InstallProtocolInterface: 6A1EE763-D47A-43B4-AABE-EF1DE2AB56FC 442193F0
+ProtectUefiImageCommon - 0x442631C0
+  - 0x0000000044218000 - 0x0000000000004340
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 53CD299F-2BC1-40C0-8C07-23F64FDB30E0 442191C0
+PROGRESS CODE: V03040003 I0
+Loading driver A487A478-51EF-48AA-8794-7BEE2A0562F1
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 442215C0
+0x441cb240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpDynamicCommand/DEBUG/tftpDynamicCommand.dll with entry point 0x441d24c8
+Loading driver at 0x000441CB000 EntryPoint=0x000441D24C8 tftpDynamicCommand.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 4421DF98
+InstallProtocolInterface: 6A1EE763-D47A-43B4-AABE-EF1DE2AB56FC 441D4430
+ProtectUefiImageCommon - 0x442215C0
+  - 0x00000000441CB000 - 0x000000000000AF80
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 3C7200E9-005F-4EA4-87DE-A3DFAC8A27C3 441D40D0
+PROGRESS CODE: V03040003 I0
+Loading driver 87E1BB14-4D5C-7C4E-A90E-E1415687D062
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 4421D240
+0x441dd240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/EmulatorPkg/TimerDxe/Timer/DEBUG/EmuTimer.dll with entry point 0x441dde39
+Loading driver at 0x000441DD000 EntryPoint=0x000441DDE39 EmuTimer.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 4421D698
+ProtectUefiImageCommon - 0x4421D240
+  - 0x00000000441DD000 - 0x0000000000001740
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 26BACCB3-6F42-11D4-BCE7-0080C73C8881 441DE520
+PROGRESS CODE: V03040003 I0
+Loading driver AD608272-D07F-4964-801E-7BD3B7888652
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 441E01C0
+0x441c9240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/MonotonicCounterRuntimeDxe/MonotonicCounterRuntimeDxe/DEBUG/MonotonicCounterRuntimeDxe.dll with entry point 0x441c9ced
+Loading driver at 0x000441C9000 EntryPoint=0x000441C9CED MonotonicCounterRuntimeDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 441E0498
+ProtectUefiImageCommon - 0x441E01C0
+  - 0x00000000441C9000 - 0x00000000000016C0
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 1DA97072-BDDC-4B30-99F1-72A0B56FFF2A 0
+PROGRESS CODE: V03040003 I0
+Loading driver 42857F0A-13F2-4B21-8A23-53D3F714B840
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 441DF1C0
+0x441c3240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/CapsuleRuntimeDxe/CapsuleRuntimeDxe/DEBUG/CapsuleRuntimeDxe.dll with entry point 0x441c3f5a
+Loading driver at 0x000441C3000 EntryPoint=0x000441C3F5A CapsuleRuntimeDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 441DFA18
+ProtectUefiImageCommon - 0x441DF1C0
+  - 0x00000000441C3000 - 0x0000000000001840
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 5053697E-2CBC-4819-90D9-0580DEEE5754 0
+PROGRESS CODE: V03040003 I0
+Loading driver E660EA85-058E-4B55-A54B-F02F83A24707
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 441D6B40
+0x4416f240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/DisplayEngineDxe/DisplayEngineDxe/DEBUG/DisplayEngine.dll with entry point 0x4417ecac
+Loading driver at 0x0004416F000 EntryPoint=0x0004417ECAC DisplayEngine.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 441D6098
+ProtectUefiImageCommon - 0x441D6B40
+  - 0x000000004416F000 - 0x0000000000014880
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 9BBE29E9-FDA1-41EC-AD52-452213742D2E 44181C10
+InstallProtocolInterface: 4311EDC0-6054-46D4-9E40-893EA952FCCC 44181C28
+PROGRESS CODE: V03040003 I0
+Loading driver 6D33944A-EC75-4855-A54D-809C75241F6C
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 441971C0
+0x4410f240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/BdsDxe/BdsDxe/DEBUG/BdsDxe.dll with entry point 0x4411eaaf
+Loading driver at 0x0004410F000 EntryPoint=0x0004411EAAF BdsDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44197618
+ProtectUefiImageCommon - 0x441971C0
+  - 0x000000004410F000 - 0x0000000000017EC0
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 665E3FF6-46CC-11D4-9A38-0090273FC14D 44126630
+PROGRESS CODE: V03040003 I0
+Loading driver F099D67F-71AE-4C36-B2A3-DCEB0EB2B7D8
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 441947C0
+0x4418c240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/WatchdogTimerDxe/WatchdogTimer/DEBUG/WatchdogTimer.dll with entry point 0x4418cdbb
+Loading driver at 0x0004418C000 EntryPoint=0x0004418CDBB WatchdogTimer.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44194598
+ProtectUefiImageCommon - 0x441947C0
+  - 0x000000004418C000 - 0x0000000000001600
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 665E3FF5-46CC-11D4-9A38-0090273FC14D 4418D3B0
+PROGRESS CODE: V03040003 I0
+Loading driver 51CCF399-4FDF-4E55-A45B-E123F84D456A
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 4418F040
+0x44184240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/Console/ConPlatformDxe/ConPlatformDxe/DEBUG/ConPlatformDxe.dll with entry point 0x44186ab2
+Loading driver at 0x00044184000 EntryPoint=0x00044186AB2 ConPlatformDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 4418FF18
+ProtectUefiImageCommon - 0x4418F040
+  - 0x0000000044184000 - 0x0000000000003A40
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 44187700
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 44187800
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 441876D0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 441876A0
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 44187800
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 441876D0
+PROGRESS CODE: V03040003 I0
+Loading driver 408EDCEC-CF6D-477C-A5A8-B4844E3DE281
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 4418F540
+0x4412f240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/Console/ConSplitterDxe/ConSplitterDxe/DEBUG/ConSplitterDxe.dll with entry point 0x44134fe0
+Loading driver at 0x0004412F000 EntryPoint=0x00044134FE0 ConSplitterDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 4418EF98
+ProtectUefiImageCommon - 0x4418F540
+  - 0x000000004412F000 - 0x0000000000007AC0
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 44136720
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 44136800
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 44136010
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 441366A0
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 441367E0
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 44135FF0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 44136620
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 441367C0
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 44135FD0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 441365A0
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 441367A0
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 44135FB0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 44136520
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 44136780
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 44135F90
+InstallProtocolInterface: 387477C1-69C7-11D2-8E39-00A0C969723B 44136350
+InstallProtocolInterface: DD9E7534-7762-4698-8C14-F58517A625AA 44136380
+InstallProtocolInterface: 31878C87-0B75-11D5-9A4F-0090273FC14D 441363F0
+InstallProtocolInterface: 8D59D32B-C655-4AE9-9B15-F25904992A43 44136448
+InstallProtocolInterface: 387477C2-69C7-11D2-8E39-00A0C969723B 441361F0
+InstallProtocolInterface: 387477C2-69C7-11D2-8E39-00A0C969723B 441360D0
+PROGRESS CODE: V03040003 I0
+Loading driver CCCB0C28-4B24-11D5-9A5A-0090273FC14D
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 441894C0
+0x44129240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/Console/GraphicsConsoleDxe/GraphicsConsoleDxe/DEBUG/GraphicsConsoleDxe.dll with entry point 0x4412c0c7
+Loading driver at 0x00044129000 EntryPoint=0x0004412C0C7 GraphicsConsoleDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44189798
+ProtectUefiImageCommon - 0x441894C0
+  - 0x0000000044129000 - 0x0000000000005600
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 4412CBC0
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 4412E380
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 4412CBA0
+PROGRESS CODE: V03040003 I0
+Loading driver 9E863906-A40F-4875-977F-5B93FF237FC6
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44188140
+0x440ff240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/Console/TerminalDxe/TerminalDxe/DEBUG/TerminalDxe.dll with entry point 0x441050ea
+Loading driver at 0x000440FF000 EntryPoint=0x000441050EA TerminalDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44188398
+ProtectUefiImageCommon - 0x44188140
+  - 0x00000000440FF000 - 0x00000000000078C0
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 44106620
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 44106680
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 44106390
+PROGRESS CODE: V03040003 I0
+Loading driver 6B38F7B4-AD98-40E9-9093-ACA2B5A253C4
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44138040
+0x4410b240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/Disk/DiskIoDxe/DiskIoDxe/DEBUG/DiskIoDxe.dll with entry point 0x4410ddc2
+Loading driver at 0x0004410B000 EntryPoint=0x0004410DDC2 DiskIoDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44188698
+ProtectUefiImageCommon - 0x44138040
+  - 0x000000004410B000 - 0x0000000000003D80
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 4410EA60
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 4410EB80
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 4410EA30
+PROGRESS CODE: V03040003 I0
+Loading driver 1FA1F39E-FEFF-4AAE-BD7B-38A070A3B609
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 441389C0
+0x440f1240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/Disk/PartitionDxe/PartitionDxe/DEBUG/PartitionDxe.dll with entry point 0x440f60c2
+Loading driver at 0x000440F1000 EntryPoint=0x000440F60C2 PartitionDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44138798
+ProtectUefiImageCommon - 0x441389C0
+  - 0x00000000440F1000 - 0x00000000000062C0
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 440F6FA0
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 440F70A0
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 440F6F70
+PROGRESS CODE: V03040003 I0
+Loading driver CD3BAFB6-50FB-4FE8-8E4E-AB74D2C1A600
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 4413C040
+0x44127240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/Disk/UnicodeCollation/EnglishDxe/EnglishDxe/DEBUG/EnglishDxe.dll with entry point 0x44127ff0
+Loading driver at 0x00044127000 EntryPoint=0x00044127FF0 EnglishDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 4413CD18
+ProtectUefiImageCommon - 0x4413C040
+  - 0x0000000044127000 - 0x0000000000001B40
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 1D85CD7F-F43D-11D2-9A0C-0090273FC14D 441285E0
+InstallProtocolInterface: A4C751FC-23AE-4C3E-92E9-4964CF63F349 44128580
+PROGRESS CODE: V03040003 I0
+Loading driver 93B80004-9FB3-11D4-9A3A-0090273FC14D
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 4413C440
+0x440c9240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Bus/Pci/PciBusDxe/PciBusDxe/DEBUG/PciBusDxe.dll with entry point 0x440d870a
+Loading driver at 0x000440C9000 EntryPoint=0x000440D870A PciBusDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 4413CA18
+ProtectUefiImageCommon - 0x4413C440
+  - 0x00000000440C9000 - 0x00000000000138C0
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 440DBF00
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 440DBDE0
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 440DC3E0
+InstallProtocolInterface: 19CB87AB-2CB9-4665-8360-DDCF6054F79D 440DC3C0
+PROGRESS CODE: V03040003 I0
+Loading driver 0167CCC4-D0F7-4F21-A3EF-9E64B7CDCE8B
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 4413E0C0
+0x440fb240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Bus/Scsi/ScsiBusDxe/ScsiBusDxe/DEBUG/ScsiBus.dll with entry point 0x440fde2d
+Loading driver at 0x000440FB000 EntryPoint=0x000440FDE2D ScsiBus.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 4413EA98
+ProtectUefiImageCommon - 0x4413E0C0
+  - 0x00000000440FB000 - 0x0000000000003900
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 440FE680
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 440FE720
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 440FE660
+PROGRESS CODE: V03040003 I0
+Loading driver 0A66E322-3740-4CCE-AD62-BD172CECCA35
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 4413E4C0
+0x440be240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Bus/Scsi/ScsiDiskDxe/ScsiDiskDxe/DEBUG/ScsiDisk.dll with entry point 0x440c775e
+Loading driver at 0x000440BE000 EntryPoint=0x000440C775E ScsiDisk.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 4413D018
+ProtectUefiImageCommon - 0x4413E4C0
+  - 0x00000000440BE000 - 0x000000000000AF40
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 440C8CE0
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 440C8D40
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 440C8C60
+PROGRESS CODE: V03040003 I0
+Loading driver 9842073D-95D9-9F49-BD3F-2E29525125DF
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 4413D140
+0x440f8240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/EmulatorPkg/EmuBusDriverDxe/EmuBusDriverDxe/DEBUG/EmuBusDriver.dll with entry point 0x440fa2c2
+Loading driver at 0x000440F8000 EntryPoint=0x000440FA2C2 EmuBusDriver.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 4413DB18
+ProtectUefiImageCommon - 0x4413D140
+  - 0x00000000440F8000 - 0x0000000000002D80
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 440FAB20
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 440FAB80
+PROGRESS CODE: V03040003 I0
+Loading driver BCC87E0D-86D6-4D4D-8040-2D983D368BD1
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 4413D4C0
+0x440ed240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/EmulatorPkg/EmuGopDxe/EmuGopDxe/DEBUG/EmuGopDxe.dll with entry point 0x440efdf6
+Loading driver at 0x000440ED000 EntryPoint=0x000440EFDF6 EmuGopDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 4413BF98
+ProtectUefiImageCommon - 0x4413D4C0
+  - 0x00000000440ED000 - 0x0000000000003A80
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 440F0820
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 440F0880
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 440F07C0
+PROGRESS CODE: V03040003 I0
+Loading driver 35B72237-3926-CF4A-A7F3-1449F9E0E4BD
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 4413B140
+0x440ea240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/EmulatorPkg/EmuSimpleFileSystemDxe/EmuSimpleFileSystemDxe/DEBUG/EmuSimpleFileSystem.dll with entry point 0x440ec29d
+Loading driver at 0x000440EA000 EntryPoint=0x000440EC29D EmuSimpleFileSystem.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 4413B398
+ProtectUefiImageCommon - 0x4413B140
+  - 0x00000000440EA000 - 0x0000000000002D40
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 440ECAC0
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 440ECB20
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 440ECA70
+PROGRESS CODE: V03040003 I0
+Loading driver C6760651-A38D-5F4F-AEAF-F6661549DF75
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 4413B540
+0x440e7240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/EmulatorPkg/EmuBlockIoDxe/EmuBlockIoDxe/DEBUG/EmuBlockIo.dll with entry point 0x440e9085
+Loading driver at 0x000440E7000 EntryPoint=0x000440E9085 EmuBlockIo.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44137B18
+ProtectUefiImageCommon - 0x4413B540
+  - 0x00000000440E7000 - 0x0000000000002B80
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 440E9940
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 440E9900
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 440E98B0
+InstallProtocolInterface: 0784924F-E296-11D4-9A49-0090273FC14D 440E9980
+InstallProtocolInterface: 4D330321-025F-4AAC-90D8-5ED900173B63 440E9890
+PROGRESS CODE: V03040003 I0
+Loading driver 22597239-6107-DF44-AD3F-5F053E92222E
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 44137140
+0x440ba240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/EmulatorPkg/EmuSnpDxe/EmuSnpDxe/DEBUG/EmuSnpDxe.dll with entry point 0x440bc37c
+Loading driver at 0x000440BA000 EntryPoint=0x000440BC37C EmuSnpDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44137518
+ProtectUefiImageCommon - 0x44137140
+  - 0x00000000440BA000 - 0x0000000000003100
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 440BCB40
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 440BCF20
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 440BCB80
+PROGRESS CODE: V03040003 I0
+Loading driver 63E3BDCF-2AC7-4AC0-9B92-03A7541422FF
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 440E2CC0
+0x440b6240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/SecurityPkg/Hash2DxeCrypto/Hash2DxeCrypto/DEBUG/Hash2DxeCrypto.dll with entry point 0x440b8aef
+Loading driver at 0x000440B6000 EntryPoint=0x000440B8AEF Hash2DxeCrypto.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 440E2898
+ProtectUefiImageCommon - 0x440E2CC0
+  - 0x00000000440B6000 - 0x0000000000003B40
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: DA836F8D-217F-4CA0-99C2-1CA4E16077EA 440E23A8
+PROGRESS CODE: V03040003 I0
+Loading driver E4F61863-FE2C-4B56-A8F4-08519BC439DF
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 440E1040
+0x44096240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/NetworkPkg/VlanConfigDxe/VlanConfigDxe/DEBUG/VlanConfigDxe.dll with entry point 0x4409b7c4
+Loading driver at 0x00044096000 EntryPoint=0x0004409B7C4 VlanConfigDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 440E1C98
+ProtectUefiImageCommon - 0x440E1040
+  - 0x0000000044096000 - 0x00000000000078C0
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 4409CEE0
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 4409D6A0
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 4409CEC0
+PROGRESS CODE: V03040003 I0
+Loading driver 025BBFC7-E6A9-4B8B-82AD-6815A1AEAF4A
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 440E1440
+0x44066240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/NetworkPkg/MnpDxe/MnpDxe/DEBUG/MnpDxe.dll with entry point 0x4406eed7
+Loading driver at 0x00044066000 EntryPoint=0x0004406EED7 MnpDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 440E0018
+ProtectUefiImageCommon - 0x440E1440
+  - 0x0000000044066000 - 0x000000000000B780
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 440714E0
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 44071560
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 44071510
+PROGRESS CODE: V03040003 I0
+Loading driver 529D3F93-E8E9-4E73-B1E1-BDF6A9D50113
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 440E0140
+0x44060240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/NetworkPkg/ArpDxe/ArpDxe/DEBUG/ArpDxe.dll with entry point 0x44064540
+Loading driver at 0x00044060000 EntryPoint=0x00044064540 ArpDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 440E0918
+ProtectUefiImageCommon - 0x440E0140
+  - 0x0000000044060000 - 0x00000000000057C0
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 44065500
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 440655C0
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 44065450
+PROGRESS CODE: V03040003 I0
+Loading driver 94734718-0BBC-47FB-96A5-EE7A5AE6A2AD
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 440DFB40
+0x44034240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/NetworkPkg/Dhcp4Dxe/Dhcp4Dxe/DEBUG/Dhcp4Dxe.dll with entry point 0x4403c165
+Loading driver at 0x00044034000 EntryPoint=0x0004403C165 Dhcp4Dxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 440DFE98
+ProtectUefiImageCommon - 0x440DFB40
+  - 0x0000000044034000 - 0x000000000000A680
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 4403E280
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 4403E3E0
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 4403E330
+PROGRESS CODE: V03040003 I0
+Loading driver 9FB1A1F3-3B71-4324-B39A-745CBB015FFF
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 440DF240
+0x43fe0240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/NetworkPkg/Ip4Dxe/Ip4Dxe/DEBUG/Ip4Dxe.dll with entry point 0x43ff1146
+Loading driver at 0x00043FE0000 EntryPoint=0x00043FF1146 Ip4Dxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 440DEF98
+ProtectUefiImageCommon - 0x440DF240
+  - 0x0000000043FE0000 - 0x0000000000014F80
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 43FF4B60
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 43FF4AC0
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 43FF4A70
+PROGRESS CODE: V03040003 I0
+Loading driver 6D6963AB-906D-4A65-A7CA-BD40E5D6AF2B
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 440DE1C0
+0x43fd6240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/NetworkPkg/Udp4Dxe/Udp4Dxe/DEBUG/Udp4Dxe.dll with entry point 0x43fdda42
+Loading driver at 0x00043FD6000 EntryPoint=0x00043FDDA42 Udp4Dxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 440DE798
+ProtectUefiImageCommon - 0x440DE1C0
+  - 0x0000000043FD6000 - 0x0000000000009B40
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 43FDF840
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 43FDF920
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 43FDF8B0
+PROGRESS CODE: V03040003 I0
+Loading driver DC3641B8-2FA8-4ED3-BC1F-F9962A03454B
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 440DD1C0
+0x43fb8240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/NetworkPkg/Mtftp4Dxe/Mtftp4Dxe/DEBUG/Mtftp4Dxe.dll with entry point 0x43fc032f
+Loading driver at 0x00043FB8000 EntryPoint=0x00043FC032F Mtftp4Dxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 440DD418
+ProtectUefiImageCommon - 0x440DD1C0
+  - 0x0000000043FB8000 - 0x0000000000009F80
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 43FC1D00
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 43FC1D80
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 43FC1D30
+PROGRESS CODE: V03040003 I0
+Loading driver B95E9FDA-26DE-48D2-8807-1F9107AC5E3A
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 4409F040
+0x43f70240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/NetworkPkg/UefiPxeBcDxe/UefiPxeBcDxe/DEBUG/UefiPxeBcDxe.dll with entry point 0x43f7c7b8
+Loading driver at 0x00043F70000 EntryPoint=0x00043F7C7B8 UefiPxeBcDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 4409FE18
+ProtectUefiImageCommon - 0x4409F040
+  - 0x0000000043F70000 - 0x0000000000011C80
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 43F819E0
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 43F81860
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 43F819B0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 43F81980
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 43F81860
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 43F819B0
+PROGRESS CODE: V03040003 I0
+Loading driver 961578FE-B6B7-44C3-AF35-6BC705CD2B1F
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 4409F640
+0x43f8a240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/FatPkg/EnhancedFatDxe/Fat/DEBUG/Fat.dll with entry point 0x43f92617
+Loading driver at 0x00043F8A000 EntryPoint=0x00043F92617 Fat.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 4409F918
+ProtectUefiImageCommon - 0x4409F640
+  - 0x0000000043F8A000 - 0x0000000000009B40
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 43F938E0
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 43F93940
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 43F93700
+PROGRESS CODE: V03040003 I0
+Loading driver FE3542FE-C1D3-4EF8-657C-8048606FF671
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 4409E0C0
+0x43f11240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MdeModulePkg/Universal/DriverSampleDxe/DriverSampleDxe/DEBUG/DriverSample.dll with entry point 0x43f1ba55
+Loading driver at 0x00043F11000 EntryPoint=0x00043F1BA55 DriverSample.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 4409E918
+ProtectUefiImageCommon - 0x4409E0C0
+  - 0x0000000043F11000 - 0x0000000000017000
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B 43F27C60
+InstallProtocolInterface: 330D4706-F2A0-4E4F-A369-B66FA8D54385 4409E780
+InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B 43F27C30
+InstallProtocolInterface: 330D4706-F2A0-4E4F-A369-B66FA8D54385 4409E780
+PROGRESS CODE: V03040003 I0
+Loading driver 1A7E4468-2F55-4A56-903C-01265EB7622B
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 43F894C0
+0x43ebd240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/NetworkPkg/TcpDxe/TcpDxe/DEBUG/TcpDxe.dll with entry point 0x43eca421
+Loading driver at 0x00043EBD000 EntryPoint=0x00043ECA421 TcpDxe.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 44074518
+ProtectUefiImageCommon - 0x43F894C0
+  - 0x0000000043EBD000 - 0x0000000000014580
+PROGRESS CODE: V03040002 I0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 43ED0F40
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 43ED0E00
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 43ED0DC0
+InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 43ED0F00
+InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D 43ED0E00
+InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 43ED0DC0
+PROGRESS CODE: V03040003 I0
+PROGRESS CODE: V03041001 I0
+[Bds] Entry...
+[BdsDxe] Locate Variable Policy protocol - Success
+Variable Driver Auto Update PlatformLang, PlatformLang:en, Lang:eng Status: Success
+PROGRESS CODE: V03051005 I0
+[Variable]END_OF_DXE is signaled
+Initialize variable error flag (FF)
+[Bds]RegisterKeyNotify: 000C/0000 80000000/00 Success
+[Bds]RegisterKeyNotify: 0011/0000 80000000/00 Success
+PROGRESS CODE: V01040001 I0
+InstallProtocolInterface: 387477C1-69C7-11D2-8E39-00A0C969723B 48EFA440
+InstallProtocolInterface: DD9E7534-7762-4698-8C14-F58517A625AA 48EFA528
+InstallProtocolInterface: 387477C2-69C7-11D2-8E39-00A0C969723B 48EFA458
+InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B 48EFB218
+[Bds]RegisterKeyNotify: 0000/000D 80000000/00 Success
+[Bds]OsIndication: 0000000000000000
+[Bds]=============Begin Load Options Dumping ...=============
+  Driver Options:
+  SysPrep Options:
+  Boot Options:
+    Boot0003: UEFI Shell                 0x0001
+    Boot0001: UEFI Non-Block Boot Device                 0x0001
+    Boot0002: UEFI BootManagerMenuApp            0x0001
+    Boot0000: UEFI Enter Setup           0x0109
+  PlatformRecovery Options:
+    PlatformRecovery0000: Default PlatformRecovery               0x0001
+[Bds]=============End Load Options Dumping=============
+[Bds]BdsWait ...Zzzzzzzzzzzz...
+[Bds]BdsWait(10)..Zzzz...
+[Bds]BdsWait(9)..Zzzz...
+[Bds]BdsWait(8)..Zzzz...
+[Bds]BdsWait(7)..Zzzz...
+[Bds]BdsWait(6)..Zzzz...
+[Bds]BdsWait(5)..Zzzz...
+[Bds]BdsWait(4)..Zzzz...
+[Bds]BdsWait(3)..Zzzz...
+[Bds]BdsWait(2)..Zzzz...
+[Bds]BdsWait(1)..Zzzz...
+[Bds]Exit the waiting!
+PROGRESS CODE: V03051007 I0
+[Bds]Stop Hotkey Service!
+[Bds]UnregisterKeyNotify: 000C/0000 Success
+[Bds]UnregisterKeyNotify: 0011/0000 Success
+[Bds]UnregisterKeyNotify: 0000/000D Success
+PROGRESS CODE: V03051001 I0
+[Bds]Booting UEFI Shell
+[Bds] Expand Fv(6D99E806-3D38-42C2-A095-5F4300BFD7DC)/FvFile(7C04A583-9E3E-4F1C-AD65-E05268D0B4D1)/Shell -> Fv(6D99E806-3D38-42C2-A095-5F4300BFD7DC)/FvFile(7C04A583-9E3E-4F1C-AD65-E05268D0B4D1)/Shell
+PROGRESS CODE: V03058000 I0
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 48DE1040
+0x48ced240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/ShellPkg/Application/Shell/Shell/DEBUG/Shell.dll with entry point 0x48d187f5
+Loading driver at 0x00048CED000 EntryPoint=0x00048D187F5 Shell.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 43F89798
+ProtectUefiImageCommon - 0x48DE1040
+  - 0x0000000048CED000 - 0x00000000000F35C0
+PROGRESS CODE: V03058001 I0
+InstallProtocolInterface: 387477C2-69C7-11D2-8E39-00A0C969723B 48EF2E20
+InstallProtocolInterface: 752F3136-4E16-4FDC-A22A-E5F46812F4CA 48EDDF98
+InstallProtocolInterface: 6302D008-7F9B-4F30-87AC-60C9FEF5DA4E 48D74B60
+[Security] 3rd party image[0] can be loaded after EndOfDxe: VenHw(5CF32E0B-8EDF-2E44-9CDA-93205E99EC1C,00000000)/VenHw(964E5B22-6459-11D2-8E39-00A0C969723B,00000000)/\HelloDepo.efi.
+InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 48EAD040
+0x48eaa240 Loading /home/egor/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64/MyPkg/HelloDepo/HelloDepo/DEBUG/HelloDepo.dll with entry point 0x48eabb3b
+Loading driver at 0x00048EAA000 EntryPoint=0x00048EABB3B HelloDepo.efi
+InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 48EC5B98
+ProtectUefiImageCommon - 0x48EAD040
+  - 0x0000000048EAA000 - 0x0000000000002900
+InstallProtocolInterface: 752F3136-4E16-4FDC-A22A-E5F46812F4CA 44F713B8
+XIO:  fatal IO error 4 (Interrupted system call) on X server ":1"
+      after 1143 requests (1143 known processed) with 0 events remaining.
+egor@Debian:~/git/edk2/Build/EmulatorX64/DEBUG_GCC5/X64$ 
